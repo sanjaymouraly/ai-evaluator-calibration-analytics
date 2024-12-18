@@ -1,0 +1,56 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Databases & generated data ---
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite3
+reports/
+backend/reports/
+
+# --- Environment & secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Node / frontend ---
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+*.tsbuildinfo
+playwright-report/
+test-results/
+coverage/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Docker ---
+.docker/
+
+# --- Logs ---
+*.log
+logs/
+
+# Local caches and generated files
+build/
+.next/
+CHANGELOG.md

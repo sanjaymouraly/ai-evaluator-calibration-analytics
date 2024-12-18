@@ -1,0 +1,61 @@
+[project]
+name = "eval-calibration-backend"
+authors = [{ name = "Sanjay Mouraly", email = "sanjaymouraly@users.noreply.github.com" }]
+version = "1.0.0"
+description = "AI Evaluator Calibration & Disagreement Analytics — backend API"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-exclude = ["alembic/versions"]
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "I",   # isort
+  "B",   # bugbear
+  "UP",  # pyupgrade
+  "SIM", # simplify
+]
+ignore = [
+  "E501",   # line length handled by formatter
+  "B008",   # Depends() in default args is idiomatic FastAPI
+  "SIM108", # ternary readability
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E402", "S101"]
+"app/seed/*" = ["SIM102"]
+
+[tool.mypy]
+python_version = "3.12"
+plugins = ["sqlalchemy.ext.mypy.plugin"]
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_unused_ignores = false
+exclude = ["alembic/"]
+# Strictly type-check the statistics core (pure Python, correctness-critical).
+files = ["app/analytics"]
+
+# ORM-heavy modules rely on SQLAlchemy's declarative metaclass; the mypy
+# plugin cannot resolve cross-module model attributes in this layout, so
+# those modules are covered by ruff + the runtime test suite instead.
+[[tool.mypy.overrides]]
+module = ["app.services.*", "app.api.*", "app.models", "app.seed.*"]
+ignore_errors = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = [
+  "ignore::DeprecationWarning:passlib.*",
+  "ignore::DeprecationWarning:jose.*",
+  "ignore::DeprecationWarning:reportlab.*",
+]
+
+[project.urls]
+Homepage = "https://github.com/sanjaymouraly/ai-evaluator-calibration-analytics"
+Repository = "https://github.com/sanjaymouraly/ai-evaluator-calibration-analytics"
+Issues = "https://github.com/sanjaymouraly/ai-evaluator-calibration-analytics/issues"

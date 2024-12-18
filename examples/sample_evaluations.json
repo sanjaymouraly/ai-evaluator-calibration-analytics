@@ -1,0 +1,62 @@
+[
+  {
+    "external_id": "ex-0001",
+    "prompt": "My order #4821 arrived with a cracked screen protector. What are my options?",
+    "response": "I'm sorry the protector arrived damaged. I can ship a free replacement today (arrives in 2-3 days) or refund the item to your original payment method within 3-5 business days. To proceed, confirm your order number and upload a photo of the packaging. I've also added a 10% courtesy credit to your account.",
+    "model_name": "Atlas-Mini",
+    "model_version": "2024.11",
+    "task_type": "customer_support",
+    "language": "en",
+    "reference_answer": "Expert reference: acknowledge the damage, offer replacement OR refund, request photo/order confirmation, state timelines, apply goodwill gesture."
+  },
+  {
+    "external_id": "ex-0002",
+    "prompt": "How do I reset two-factor authentication after losing my phone?",
+    "response": "Go to Settings, then Security, then Two-Factor Authentication, and choose 'Reset'. You will need to verify your identity with a code sent to your registered email. After resetting, re-enrol your new device by scanning the QR code shown.",
+    "model_name": "Nova-Pro",
+    "model_version": "2025.02",
+    "task_type": "customer_support",
+    "language": "en",
+    "reference_answer": "Expert reference: navigate Settings > Security > 2FA > Reset; verify via registered email; re-enrol new device via QR."
+  },
+  {
+    "external_id": "ex-0003",
+    "prompt": "Write a haiku about working from home.",
+    "response": "Keyboard clicks echo, / coffee cools beside the screen, / meetings melt to mute.",
+    "model_name": "Helix-7B",
+    "model_version": "2025.06",
+    "task_type": "creative_writing",
+    "language": "en",
+    "reference_answer": "Expert reference: 5-7-5 syllable structure, single coherent image, no filler lines."
+  },
+  {
+    "external_id": "ex-0004",
+    "prompt": "The app crashes whenever I upload a file larger than 10MB. Help?",
+    "response": "Large uploads can exceed the current 10MB limit and crash older builds. Please update to version 3.2 or later, where the limit is 50MB. If you must send a larger file now, use the web uploader at upload.example.com which supports up to 2GB.",
+    "model_name": "Atlas-Mini",
+    "model_version": "2024.11",
+    "task_type": "customer_support",
+    "language": "en",
+    "reference_answer": "Expert reference: explain the limit, direct to updated build, offer the web uploader workaround for oversized files."
+  },
+  {
+    "external_id": "ex-0005",
+    "prompt": "Can I switch from monthly to annual billing mid-cycle?",
+    "response": "Yes. When you switch, we prorate the unused portion of your current month and apply it as credit toward the annual plan. The change takes effect immediately and your renewal date becomes today's date next year.",
+    "model_name": "Nova-Pro",
+    "model_version": "2025.02",
+    "task_type": "customer_support",
+    "language": "en",
+    "reference_answer": "Expert reference: confirm switch is allowed, explain proration of unused time, state effective date and new renewal date."
+  },
+  {
+    "external_id": "ex-0006",
+    "prompt": "Draft a two-sentence product description for a ceramic travel mug.",
+    "response": "A double-walled ceramic travel mug that keeps coffee hot for four hours without metallic aftertaste. Its leak-proof lid and matte grip make it as practical on a commute as it is pleasant to hold.",
+    "model_name": "Helix-7B",
+    "model_version": "2025.06",
+    "task_type": "creative_writing",
+    "language": "en",
+    "reference_answer": "Expert reference: exactly two sentences; mention material, insulation benefit, and one usability feature."
+  }
+]
